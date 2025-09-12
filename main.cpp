@@ -178,6 +178,13 @@ Image flipHorizontal(const Image& input) {  // habiba sakr
     // TODO: Implement this function
     // For each pixel and each channel:
     //   output(y, width-1-x, c) = input(y, x, c)
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            for (int c = 0; c < channels; c++) {
+                output(y, width - 1 - x, c) = input(y, x, c);
+            }
+        }
+    }
 
     return output;
 }
@@ -201,6 +208,13 @@ Image flipVertical(const Image& input) {  // habiba sakr
     // TODO: Implement this function
     // For each pixel and each channel:
     //   output(height-1-y, x, c) = input(y, x, c)
+    for (int y = 0; y < height; y++) {
+        for (int x = 0; x < width; x++) {
+            for (int c = 0; c < channels; c++) {
+                output(height - 1 - y, x, c) = input(y, x, c);
+            }
+        }
+    }
 
     return output;
 }
@@ -362,7 +376,7 @@ int main() {
     // Apply various transformations
     cout << "Applying image transformations...\n";
 
-    Image gray = convertToGrayscale(input);
+   Image gray = convertToGrayscale(input);
     gray.savePPM("gray_image.ppm");
     cout << "- Grayscale conversion completed\n";
     cout << "Grayscale image data:\n";
@@ -383,7 +397,7 @@ int main() {
     flippedV.print();
     cout << endl;
 
-    Image bright = adjustBrightness(input, 50);
+   Image bright = adjustBrightness(input, 50);
     bright.savePPM("bright_image.ppm");
     cout << "- Brightness adjustment completed\n";
     cout << "Brightness adjusted image data:\n";
