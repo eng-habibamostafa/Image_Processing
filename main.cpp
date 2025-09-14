@@ -149,6 +149,31 @@ Image convertToGrayscale(const Image& input) {  // habiba gabr
     int height = input.getHeight();
     int width = input.getWidth();
     Image output(width, height, 1); // Single channel for grayscale
+    int inChannels = input . getChannels();
+    for(int y = 0; y< height; y++){
+        for(int x = 0; x< width; x++){
+            if(inChannels >= 3){
+                int R = input(y,x,0);
+                int G = input(y,x,1);
+                int B = input(y,x,2);
+                double grayFloat = 0.299 * R + 0.587 * G + 0.114 * B;
+                int gray = static_cast<int>(round(grayFloat));
+                if(gray<0)
+                gray = 0;
+                if(gray> 255)
+                gray = 255;
+                output(y,x,0) = gray;
+            }
+            else{
+                int val = input(y,x,0);
+                if(val<0)
+                val = 0;
+                if(val> 255)
+                val = 255;
+                output(y,x,0) = val;
+            }
+        }
+    }
 
     // TODO: Implement this function
     // For each pixel:
