@@ -301,6 +301,7 @@ Image adjustBrightness(const Image &input, int value)
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
+    Image output(width, height, channels);
 
 
     // TODO: Implement this function
@@ -317,6 +318,8 @@ Image adjustBrightness(const Image &input, int value)
         }
     }
     
+    return output;
+
 
 }
 
