@@ -175,7 +175,11 @@ public:
  * 3. Return the grayscale image
  */
 Image convertToGrayscale(const Image &input)
+<<<<<<< HEAD
 {
+=======
+{ // habiba gabr
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     Image output(width, height, 1); // Single channel for grayscale
@@ -229,7 +233,11 @@ Image convertToGrayscale(const Image &input)
  * 3. Return the flipped image
  */
 Image flipHorizontal(const Image &input)
+<<<<<<< HEAD
 {
+=======
+{ // habiba sakr
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -263,7 +271,11 @@ Image flipHorizontal(const Image &input)
  * 3. Return the flipped image
  */
 Image flipVertical(const Image &input)
+<<<<<<< HEAD
 {
+=======
+{ // habiba sakr
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -297,7 +309,11 @@ Image flipVertical(const Image &input)
  * 3. Return the adjusted image
  */
 Image adjustBrightness(const Image &input, int value)
+<<<<<<< HEAD
 {
+=======
+{ // farah
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -324,7 +340,11 @@ Image adjustBrightness(const Image &input, int value)
  * 3. Return the adjusted image
  */
 Image adjustContrast(const Image &input, float factor)
+<<<<<<< HEAD
 {
+=======
+{ // hana
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -362,7 +382,11 @@ Image adjustContrast(const Image &input, float factor)
  * 3. Return the blurred image
  */
 Image applyBlur(const Image &input)
+<<<<<<< HEAD
 {
+=======
+{ // ahmed
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -407,7 +431,11 @@ Image applyBlur(const Image &input)
  * 3. Return the rotated image
  */
 Image rotate90(const Image &input)
+<<<<<<< HEAD
 {
+=======
+{ // omer
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     int height = input.getHeight();
     int width = input.getWidth();
     int channels = input.getChannels();
@@ -416,7 +444,10 @@ Image rotate90(const Image &input)
     // TODO: Implement this function
     // For each pixel and each channel:
     //   output(x, height-1-y, c) = input(y, x, c)
+<<<<<<< HEAD
 
+=======
+>>>>>>> efeabca48dc44bd4cbfb9f00c24252e365da712b
     for (int j = 0; j < height; j++)
     {
         for (int i = 0; i < width; i++)
