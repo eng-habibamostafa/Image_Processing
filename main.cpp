@@ -315,7 +315,13 @@ Image rotate90(const Image& input) {   // omer
     // TODO: Implement this function
     // For each pixel and each channel:
     //   output(x, height-1-y, c) = input(y, x, c)
-
+    for(int j = 0; j < height; j++){
+        for(int i = 0; i < width; i++){
+            for(int c = 0; c < channels; c++){
+                output(i, height - 1 - j, c) = input(j, i, c);
+            }
+        }
+    }
     return output;
 }
 
